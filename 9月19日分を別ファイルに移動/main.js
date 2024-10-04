@@ -1,16 +1,8 @@
-document.querySelector("h1").textContent = "そのだりお"
+document.getElementById("text").style.color="red";
 
-//documentとは！！
-/*htmlファイルで書かれているコードを一つのオブジェクトとしてみなす。*/
-//DOM（ドむ）
-/*ドキュメントオブジェクトモデル（Document Object Model）の略で、
-WEBページの要素やコンテンツなどをツリー構造で表現したデータモデル*/
-//上記コードの意味
-//document.queryselector("h1").textContent="自分の名前"
 
-//ドキュメントの中の("h1")タグを探してね
-//document.queryselector("h1")
+//docment.getElementIdById("text")style.color="red";
+/*これは、ドキュメントの中の｛text｝というIDを持っている
+タグのスタイルの色を赤にしてください*/
 
-//h1タグの中身のtextを変えてね
-//textcontent="自分の名前"
-document.querySelector("h2").textContent = "そのだりお"
+document.querySelectorAll("h1").style.color="red";
