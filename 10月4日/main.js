@@ -10,7 +10,16 @@ function errorInput(){
 
 }
 
+const monthselect=document.getElementById("month2");
+monthselectlist();
+function monthselectlist(){
+    for (let i=1;i<12;i++){
+        let option=document.createElement('otion');
+        option.value=i;
+        monthselect.appendChild(option);
 
+    }
+}
 //document.getElementByid("month")はタグを確認するだけ
 //valueはそのタグの値を示す
 
