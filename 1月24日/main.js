@@ -28,6 +28,7 @@
     gameContainar.appendChild(button2);
     gameContainar.appendChild(button3);
     gameContainar.appendChild(counter);
+//function ClickCounterGame(){
 
 function startNumberGuessGame(){
     const randomNumber = Math.floor(Math.random()*100)+1;
@@ -38,5 +39,20 @@ function startNumberGuessGame(){
     input.placeholder = "好きな数字を入力してください (1 ~ 100)"
     gameContainar.appendChild(message);
     gameContainar.appendChild(input);
+
+    let button = document.createElement("button");
+    button.textContent = "確認"
+   
+    button.addEventListener("click",function(){
+        const val = parseInt(input.value);
+        if (randomNumber == val){
+            message.textContent ="正解"
+        }else if (randomNumber < val){  
+            message.textContent ="大きい"
+        }else{
+            message.textContent = "小さい"
+        }
+    })
+    gameContainar.appendChild(button);
 }
 startNumberGuessGame();
