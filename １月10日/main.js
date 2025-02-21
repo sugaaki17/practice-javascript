@@ -1,17 +1,29 @@
-//function ClickCounterGame(){
-    let count = 0;
-    const gameContainar = document.getElementById("game-container");
+const gameSelector = document.getElementById('game-selector');
+const gameContainer = document.getElementById('game-container');
+gameContainer.textContent="ゲームを選ぶとここに表示されます"
 
-    let button1 = document.createElement("button");
-    button1.textContent = "+1ボタン";
-    
-    let counter = document.createElement("p");
-    counter.textContent = count;
-    
-    button1.addEventListener("click",function(){
-        count++;
-        counter.textContent = count;
-    })
-    gameContainar.appendChild(button1);
-    gameContainar.appendChild(counter);
-//}
+gameSelector.addEventListener("change",function(){
+    gameContainer.innerHTML="";
+    switch(gameSelector.value){
+        case "click-counter":
+            ClickCounterGame();
+            break;
+         case "none":
+            gameContainer.textContent="ゲームを選ぶとここに表示されます"
+        break;
+        case "number-guess":
+            NumberGuessGame();
+        break;
+        case "RPS":
+            RPS();
+        break;
+    }
+})
+
+
+
+
+
+
+
+
